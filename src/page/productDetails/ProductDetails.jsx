@@ -8,7 +8,7 @@ import SlideProduct from '../../components/slideProduct/SlideProduct';
 import ProductDetailsLoading from './ProductDetailsLoading';
 import SlideproductLoading from '../../components/slideProduct/SlideproductLoading';
 import ProductInfo from './ProductInfo';
-import ProductImages from './productimages';
+import ProductImages from "./ProductImages";
 import PageTransition from '../../components/PageTransition';
 
 function ProductDetails() {
