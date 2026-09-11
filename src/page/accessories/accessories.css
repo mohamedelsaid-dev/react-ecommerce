@@ -1,0 +1,237 @@
+/* =========================================
+   Accessories Page
+========================================= */
+
+.accessories-page {
+    width: 100%;
+    background-color: var(--white_color);
+    color: var(--color_heading);
+}
+
+
+/* =========================================
+   Hero Section
+========================================= */
+
+.accessories-hero {
+    width: 100%;
+    background-color: var(--bg_color);
+    padding: 55px 0;
+    border-bottom: 1px solid var(--border_color);
+}
+
+.accessories-hero .container {
+    text-align: center;
+}
+
+
+/* Store Name */
+
+.accessories-hero span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--main_color);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+/* Main Title */
+
+.accessories-hero h1 {
+    margin: 0 0 15px;
+    color: var(--main_color);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.accessories-hero h1 strong {
+    color: var(--main_color);
+}
+
+
+/* Description */
+
+.accessories-hero p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--p_color);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Accessories Products Section
+========================================= */
+
+.accessories-page .slide_products {
+    width: 100%;
+    padding: 50px 0 70px;
+    background-color: var(--white_color);
+}
+
+
+/* =========================================
+   Mobile Accessories Title
+========================================= */
+
+.accessories-page .slide_products .top_slide {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border_color);
+}
+
+
+/* Section Title */
+
+.accessories-page .slide_products .top_slide h2 {
+    margin: 0 0 8px;
+    color: var(--main_color);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* Section Description */
+
+.accessories-page .slide_products .top_slide p {
+    margin: 0;
+    color: var(--p_color);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* Blue Line */
+
+.accessories-page .slide_products .top_slide::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100px;
+    height: 3px;
+    background-color: var(--main_color);
+}
+
+
+/* =========================================
+   Product Slider
+========================================= */
+
+.accessories-page .slide_products .container {
+    width: 100%;
+}
+
+
+/* =========================================
+   Swiper Navigation
+   Arrow Only - No Blue Circle
+========================================= */
+
+.accessories-page .swiper-button-next,
+.accessories-page .swiper-button-prev {
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+/* Arrow */
+
+.accessories-page .swiper-button-next::after,
+.accessories-page .swiper-button-prev::after {
+    color: var(--main_color);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* Hover */
+
+.accessories-page .swiper-button-next:hover,
+.accessories-page .swiper-button-prev:hover {
+    background-color: transparent;
+}
+
+.accessories-page .swiper-button-next:hover::after,
+.accessories-page .swiper-button-prev:hover::after {
+    color: var(--color_heading);
+}
+
+
+/* =========================================
+   Tablet / Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+    .accessories-hero {
+        padding: 45px 20px;
+    }
+
+    .accessories-hero h1 {
+        font-size: 34px;
+    }
+
+    .accessories-hero p {
+        font-size: 15px;
+    }
+
+    .accessories-page .slide_products {
+        padding: 40px 0 55px;
+    }
+
+    .accessories-page .slide_products .top_slide h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 480px) {
+
+    .accessories-hero {
+        padding: 35px 15px;
+    }
+
+    .accessories-hero span {
+        font-size: 14px;
+    }
+
+    .accessories-hero h1 {
+        font-size: 29px;
+    }
+
+    .accessories-hero p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .accessories-page .slide_products {
+        padding: 35px 0 45px;
+    }
+
+    .accessories-page .slide_products .top_slide {
+        margin-bottom: 25px;
+    }
+
+    .accessories-page .slide_products .top_slide h2 {
+        font-size: 24px;
+    }
+
+    .accessories-page .slide_products .top_slide p {
+        font-size: 14px;
+    }
+
+}

@@ -11,8 +11,12 @@ import { AnimatePresence } from "framer-motion"
 import CategoryPage from "./page/CategoryPage/CategoryPage";
 import SearchResults from "./page/SearchResults"
 import Favorites from "./page/favorites/Favorites"
+import About from "./page/about/About"
+import Accessories from "./page/accessories/Accessories"
+import Blog from "./page/blog/Blog"
+import Contact from "./page/contact/Contact"
 function App() {
-  
+
 
 
 
@@ -25,22 +29,26 @@ function App() {
       </header>
 
       <Toaster position="bottom-right" toastOptions={{
-        style:{
+        style: {
           background: '#e9e9',
           borderRadius: '5px',
           padding: '14px'
         }
-         
-        
+
+
       }} />
 
-      <ScrollToTop/>
+      <ScrollToTop />
 
-      <AnimatePresence  mode="wait" >
+      <AnimatePresence mode="wait" >
         <Routes>
 
 
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/accessories" element={<Accessories />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<SearchResults />} />
           <Route path="/favorites" element={<Favorites />} />
@@ -52,9 +60,9 @@ function App() {
       </AnimatePresence >
 
 
-      
 
-      
+
+
 
     </>
   )

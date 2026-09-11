@@ -12,15 +12,16 @@ import toast from 'react-hot-toast';
 
 
 
+
 function Product({ item }) {
 
     const navigate = useNavigate()
 
     const { cartItems, addToCart, favorites, addToFavorites, removeFromFavorites } = useContext(CartContext)
-    
+
     const isInCart = cartItems.some(i => i.id === item.id);
 
-    const handleAddToCart= () => {
+    const handleAddToCart = () => {
         addToCart(item)
 
         toast.success(
@@ -28,13 +29,13 @@ function Product({ item }) {
                 <img src={item.images[0]} className='toast-img' />
                 <div className="toast-contant">
                     <strong>{item.title}</strong>
-                    added to Cart 
+                    added to Cart
                     <div>
-                        <button className='btn' onClick={()=> navigate('/cart')}> view Cart</button>
+                        <button className='btn' onClick={() => navigate('/cart')}> view Cart</button>
                     </div>
                 </div>
             </div>
-            ,{duration :3500}
+            , { duration: 3500 }
         )
 
     }
@@ -43,16 +44,51 @@ function Product({ item }) {
 
     const isInFav = favorites.some(i => i.id === item.id);
 
-    const handleAddToFav = ()=> {
-        if(isInFav) {
+    const handleAddToFav = () => {
+        if (isInFav) {
             removeFromFavorites(item.id)
             toast.error(`${item.title} Removed From favorites`)
 
-        }else{
+        } else {
             addToFavorites(item)
             toast.success(`${item.title} added To favorites`)
         }
-        
+
+
+    }
+
+    // Share Product
+
+    const handleShare = async () => {
+
+        const productUrl = `${window.location.origin}/products/${item.id}`
+
+        try {
+
+            if (navigator.share) {
+
+                await navigator.share({
+                    title: item.title,
+                    text: `Check out ${item.title}`,
+                    url: productUrl
+                })
+
+            } else {
+
+                await navigator.clipboard.writeText(productUrl)
+
+                toast.success("Product link copied!")
+
+            }
+
+        } catch (error) {
+
+            if (error.name !== "AbortError") {
+                console.error("Share failed:", error)
+                toast.error("Unable to share product")
+            }
+
+        }
 
     }
 
@@ -84,12 +120,12 @@ function Product({ item }) {
 
             </Link>
 
-            
+
 
             <div className="icons">
                 <span className='btn_addtocart' onClick={handleAddToCart} ><FaCartArrowDown /></span>
                 <span className={`${isInFav ? "in-fav" : ""}`} onClick={handleAddToFav}><FaRegHeart /></span>
-                <span><IoMdShare /></span>
+                <span onClick={handleShare}><IoMdShare /></span>
 
             </div>
 

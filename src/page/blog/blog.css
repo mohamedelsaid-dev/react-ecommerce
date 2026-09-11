@@ -1,0 +1,285 @@
+/* =========================================
+   Blog Page
+========================================= */
+
+.blog-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--white_color);
+    color: var(--color_heading);
+}
+
+
+/* =========================================
+   Blog Hero
+========================================= */
+
+.blog-hero {
+    width: 100%;
+    background-color: var(--bg_color);
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--border_color);
+}
+
+.blog-hero .container {
+    text-align: center;
+}
+
+
+/* Store Name */
+
+.blog-hero span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--main_color);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+/* Main Title */
+
+.blog-hero h1 {
+    margin: 0 0 15px;
+    color: var(--main_color);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.blog-hero h1 strong {
+    color: var(--main_color);
+}
+
+
+/* Hero Description */
+
+.blog-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--p_color);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Blog Content
+========================================= */
+
+.blog-content {
+    padding: 60px 0 80px;
+}
+
+
+/* =========================================
+   Blog Heading
+========================================= */
+
+.blog-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-heading h2 {
+    margin: 0 0 10px;
+    color: var(--main_color);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.blog-heading p {
+    margin: 0;
+    color: var(--p_color);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   Blog Grid
+========================================= */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================================
+   Blog Card
+========================================= */
+
+.blog-card {
+    background-color: var(--white_color);
+    border: 1px solid var(--border_color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Card Content */
+
+.blog-card-content {
+    padding: 25px;
+}
+
+
+/* =========================================
+   Category
+========================================= */
+
+.blog-category {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: var(--main_color);
+    color: var(--white_color);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   Article Title
+========================================= */
+
+.blog-card h3 {
+    margin: 0 0 12px;
+    color: var(--color_heading);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   Article Description
+========================================= */
+
+.blog-card p {
+    margin: 0 0 20px;
+    color: var(--p_color);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Card Footer
+========================================= */
+
+.blog-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid var(--border_color);
+}
+
+.blog-card-footer span {
+    color: var(--p_color);
+    font-size: 13px;
+}
+
+
+/* Read More Button */
+
+.blog-card-footer button {
+    border: none;
+    background-color: transparent;
+    color: var(--main_color);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.blog-card-footer button:hover {
+    color: var(--color_heading);
+}
+
+
+/* =========================================
+   Tablet
+========================================= */
+
+@media (max-width: 900px) {
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 600px) {
+
+    .blog-hero {
+        padding: 45px 15px;
+    }
+
+    .blog-hero h1 {
+        font-size: 32px;
+    }
+
+    .blog-hero p {
+        font-size: 15px;
+    }
+
+    .blog-content {
+        padding: 45px 15px 60px;
+    }
+
+    .blog-heading {
+        margin-bottom: 30px;
+    }
+
+    .blog-heading h2 {
+        font-size: 26px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .blog-card-content {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 480px) {
+
+    .blog-hero h1 {
+        font-size: 29px;
+    }
+
+    .blog-hero p {
+        font-size: 14px;
+    }
+
+    .blog-card h3 {
+        font-size: 18px;
+    }
+
+}

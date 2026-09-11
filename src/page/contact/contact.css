@@ -1,0 +1,244 @@
+/* =========================================
+   Contact Page
+========================================= */
+
+.contact-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--white_color);
+    color: var(--color_heading);
+}
+
+
+/* =========================================
+   Contact Hero
+========================================= */
+
+.contact-hero {
+    width: 100%;
+    background-color: var(--bg_color);
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--border_color);
+}
+
+.contact-hero .container {
+    text-align: center;
+}
+
+
+/* Store Name */
+
+.contact-hero span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--main_color);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+/* Main Title */
+
+.contact-hero h1 {
+    margin: 0 0 15px;
+    color: var(--main_color);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contact-hero h1 strong {
+    color: var(--main_color);
+}
+
+
+/* Description */
+
+.contact-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--p_color);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Contact Content
+========================================= */
+
+.contact-content {
+    padding: 60px 0 80px;
+}
+
+
+/* =========================================
+   Contact Grid
+========================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+
+/* =========================================
+   Contact Information
+========================================= */
+
+.contact-info {
+    padding: 10px 0;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    margin: 0 0 15px;
+    color: var(--main_color);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.contact-description {
+    margin: 0 0 35px;
+    color: var(--p_color);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   Contact Item
+========================================= */
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+
+/* Icon */
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--main_color);
+    font-size: 20px;
+}
+
+
+/* Contact Item Text */
+
+.contact-item h3 {
+    margin: 0 0 5px;
+    color: var(--color_heading);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.contact-item p {
+    margin: 0;
+    color: var(--p_color);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   Contact Form
+========================================= */
+
+.contact-form {
+    padding: 30px;
+    border: 1px solid var(--border_color);
+    border-radius: 10px;
+    background-color: var(--white_color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+}
+
+
+/* Form Group */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Label */
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color_heading);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Inputs */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border_color);
+    border-radius: 6px;
+    background-color: var(--white_color);
+    color: var(--color_heading);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--main_color);
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+
+/* =========================================
+   Send Button
+========================================= */
+
+.contact-form button {
+    width: 100%;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--main_color);
+    color: var(--white_color);
+}
