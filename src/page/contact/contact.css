@@ -242,3 +242,114 @@
     background-color: var(--main_color);
     color: var(--white_color);
 }
+
+/* =========================================
+   Responsive Contact Page
+========================================= */
+
+@media (max-width: 768px) {
+
+    .contact-page {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Contact Hero */
+
+    .contact-hero {
+        padding: 40px 20px;
+        box-sizing: border-box;
+    }
+
+    .contact-hero h1 {
+        font-size: 34px;
+    }
+
+    .contact-hero p {
+        font-size: 15px;
+    }
+
+
+    /* Contact Content */
+
+    .contact-content {
+        padding: 40px 20px 60px;
+        box-sizing: border-box;
+    }
+
+
+    /* Change Grid to One Column */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        width: 100%;
+    }
+
+
+    /* Contact Information */
+
+    .contact-info {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 28px;
+    }
+
+    .contact-description {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+
+    /* Contact Items */
+
+    .contact-item {
+        width: 100%;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .contact-item h3 {
+        font-size: 16px;
+    }
+
+    .contact-item p {
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+
+    /* Contact Form */
+
+    .contact-form {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 20px;
+    }
+
+
+    /* Inputs */
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Prevent Long Text Overflow */
+
+    .contact-page * {
+        max-width: 100%;
+    }
+
+}

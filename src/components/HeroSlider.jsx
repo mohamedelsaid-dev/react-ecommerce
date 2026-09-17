@@ -31,22 +31,23 @@ function HeroSlider() {
                         <SwiperSlide>
                             <div className="content">
                                 <h4>Introducing the new</h4>
-                                <h3>Smart Home <br /> Speaker</h3>
-                                <p>Powerful sound. Smart features. Everyday convenience.</p>
+                                <h3>Gaming Accessories <br /> For Every Player</h3>
+                                <p>Take your gaming experience to the next level.</p>
                                 <Link to="/" className='btn'>Shop Now</Link>
                             </div>
 
-                            <img src={bannerHero1} alt="Smart Home Speaker" />
+                            <img src={bannerHero1} alt="Gaming Accessories" />
                         </SwiperSlide>
 
                         <SwiperSlide>
                             <div className="content">
                                 <h4>Introducing the new</h4>
-                                <h3>Gaming Accessories <br /> For Every Player</h3>
-                                <p>Take your gaming experience to the next level.</p>
+                                <h3>Smart Home <br /> Speaker</h3>
+                                <p>Powerful sound. Smart features. Everyday convenience.</p>
                                 <Link to="/" className='btn'>Shop Now</Link>
                             </div>
-                            <img src={bannerHero2} alt="Gaming Accessories" />
+
+                            <img src={bannerHero2} alt="Smart Home Speaker" />
                         </SwiperSlide>
 
                         <SwiperSlide>
@@ -56,6 +57,7 @@ function HeroSlider() {
                                 <p>Enjoy your favorite music wherever you go.</p>
                                 <Link to="/" className='btn'>Shop Now</Link>
                             </div>
+
                             <img src={bannerHero3} alt="Portable Music Player" />
                         </SwiperSlide>
 

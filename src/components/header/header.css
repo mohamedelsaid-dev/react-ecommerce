@@ -231,3 +231,203 @@ padding: 0 25px;
 }
 
 
+/* =========================
+   Mobile Navigation
+========================= */
+
+.mobile_nav_btn {
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--white_color);
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile_nav_btn svg {
+    font-size: 24px;
+}
+
+.mobile_nav_btn span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.mobile_nav_links {
+    display: none;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .btm_header .container {
+        position: relative;
+    }
+
+    .btm_header .container .nav {
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    /* Browse Category */
+
+    .btm_header .category_nav {
+        width: 220px;
+    }
+
+    .btm_header .category_nav .category_btn {
+        padding: 0 15px;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .btm_header .nav_links {
+        display: none;
+    }
+
+
+    /* Mobile menu button */
+
+    .mobile_nav_btn {
+        display: flex;
+    }
+
+
+    /* Mobile menu */
+
+    .mobile_nav_links {
+        position: absolute;
+
+        top: 50px;
+        right: 0;
+
+        width: 200px;
+
+        background: var(--white_color);
+
+        border: 1px solid var(--border_color);
+
+        display: flex;
+
+        flex-direction: column;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition: 0.3s ease;
+
+        z-index: 2000;
+    }
+
+
+    .mobile_nav_links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+    .mobile_nav_links a {
+        padding: 14px 18px;
+
+        color: var(--color_heading);
+
+        border-bottom: 1px solid var(--border_color);
+
+        font-size: 15px;
+
+        background: var(--white_color);
+    }
+
+
+    .mobile_nav_links a:last-child {
+        border-bottom: none;
+    }
+
+
+    .mobile_nav_links a:hover,
+    .mobile_nav_links a.active {
+        background: var(--main_color);
+        color: var(--white_color);
+    }
+
+
+    /* Login / Register */
+
+    .btm_header .sign_regs_icon {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .top_header .container {
+        padding: 10px 20px;
+    }
+
+    .top_header .search_box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .top_header .search_box input {
+        width: calc(100% - 60px);
+        box-sizing: border-box;
+    }
+
+    .top_header .search_box button {
+        width: 60px;
+        flex-shrink: 0;
+    }
+
+}
+
+/* =========================
+   Mobile Header
+========================= */
+
+@media (max-width: 768px) {
+
+    .btm_header .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .btm_header .container .nav {
+        width: 100%;
+        height: 50px;
+        justify-content: space-between;
+    }
+
+    .btm_header .category_nav {
+        width: 220px;
+    }
+
+    .btm_header .nav_links {
+        display: none;
+    }
+
+    .btm_header .sign_regs_icon {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-right: 15px;
+    }
+
+    .btm_header .sign_regs_icon svg {
+        font-size: 21px;
+        fill: var(--white_color);
+    }
+
+}

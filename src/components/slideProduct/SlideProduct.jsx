@@ -8,14 +8,14 @@ import { Autoplay, Navigation } from 'swiper/modules';
 
 
 
-function SlideProduct({ data, title }) {
-    console.log(data);
+function SlideProduct({ data, title, description }) {
+
     return (
         <div className="slide_products slide">
             <div className="container">
                 <div className="top_slide">
                     <h2>{title}</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>{description}</p>
                 </div>
 
                 <Swiper
@@ -24,20 +24,40 @@ function SlideProduct({ data, title }) {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-
-
-                    slidesPerView={5} navigation={true} modules={[Autoplay, Navigation]} className="mySwiper">
-
-                       {data.map((item) => {
-                        return(
-                            <SwiperSlide><Product item={item} /></SwiperSlide>
-
+                    navigation={true}
+                    modules={[Autoplay, Navigation]}
+                    className="mySwiper"
+                    spaceBetween={20}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                        },
+                        480: {
+                            slidesPerView: 2,
+                            spaceBetween: 15,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 20,
+                        },
+                        1200: {
+                            slidesPerView: 5,
+                            spaceBetween: 20,
+                        },
+                    }}
+                >
+                    {data.map((item) => {
+                        return (
+                            <SwiperSlide key={item.id}>
+                                <Product item={item} />
+                            </SwiperSlide>
                         )
-                         
-                       })} 
-                   
-
-
+                    })}
                 </Swiper>
 
             </div>

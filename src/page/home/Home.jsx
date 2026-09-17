@@ -6,13 +6,30 @@ import SlideproductLoading from '../../components/slideProduct/SlideproductLoadi
 import PageTransition from '../../components/PageTransition'
 
 const categories = [
-  "smartphones",
-  "mobile-accessories",
-  "laptops",
-  "tablets",
-  "sunglasses",
-  "sports-accessories",
-
+  {
+    name: "smartphones",
+    description: "Discover the latest smartphones with powerful performance and modern features."
+  },
+  {
+    name: "mobile-accessories",
+    description: "Find essential accessories to enhance and protect your mobile devices."
+  },
+  {
+    name: "laptops",
+    description: "Explore powerful laptops for work, study, gaming, and everyday use."
+  },
+  {
+    name: "tablets",
+    description: "Browse versatile tablets designed for entertainment, productivity, and more."
+  },
+  {
+    name: "sunglasses",
+    description: "Discover stylish sunglasses that combine modern design with everyday comfort."
+  },
+  {
+    name: "sports-accessories",
+    description: "Get the sports accessories you need to support an active lifestyle."
+  },
 ]
 
 function Home() {
@@ -26,10 +43,15 @@ function Home() {
       try {
         const results = await Promise.all(
           categories.map(async (category) => {
-            const res = await fetch(`https://dummyjson.com/products/category/${category}`)
-            const data = await res.json();
-            return { [category]: data.products }
+            const res = await fetch(
+              `https://dummyjson.com/products/category/${category.name}`
+            )
 
+            const data = await res.json();
+
+            return {
+              [category.name]: data.products
+            }
           })
         )
         const productsData = Object.assign({}, ...results);
@@ -56,18 +78,21 @@ function Home() {
 
         {loading ? (
           categories.map((category) => (
-            <SlideproductLoading key={category} />
+            <SlideproductLoading key={category.name} />
           ))
 
         ) : (
 
 
 
-          categories.map((category) => (
-
-            <SlideProduct key={category} data={products[category]} title={category.replace("-", " ")} />
-
-          ))
+            categories.map((category) => (
+              <SlideProduct
+                key={category.name}
+                data={products[category.name]}
+                title={category.name.replace("-", " ")}
+                description={category.description}
+              />
+            ))
         )}
 
 
